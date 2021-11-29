@@ -22,7 +22,8 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/source/
         make setup
-        ls -l
+        rm .git/ -rf
+
         
     - uses: actions/checkout@v2
       with:
