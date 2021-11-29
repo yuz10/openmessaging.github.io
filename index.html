@@ -1,119 +1,206 @@
----
-layout: default
-section_id: home
-slides:
-  - bg: images/@index/OpenMessagingCover.png
-    title:
-      text: '<font color="black" style="text-transform: none">A cloud native, vendor-neutral open specification for distributed messaging</font><br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=openmessaging&repo=specification&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=openmessaging&repo=specification&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe>'
-      class: large-20 medium-20
-boxes:
-  - icon_class: fa fa-cloud
-    title: Cloud Oriented
-    text:
-      Designed for robust implementation on clouds with scalability, flexibility, isolation, and security.
-  - icon_class: fa fa-compass
-    title: Multi Domains
-    text:
-      Does not rely on or favors any business products and provides a large range of support including finance, e-commerce and IoT.
-  - icon_class: fa fa-star-half-empty
-    title: Platform Independent
-    text:
-      Compatible with most platforms including Java, c/c++, go, .net, python, etc.
-  - icon_class: fa fa-filter
-    title: Streaming
-    text:
-      Enables big data streaming and computation to meet the cutting-edge business demands.
-  - icon_class: fa fa-dot-circle-o
-    title: Standard Benchmark
-    text:
-      Facilitates standard benchmark to allow standard tests.
-  - icon_class: fa fa-plug
-    title: Wire Level Pluggable
-    text:
-      MQTT, AMQP, Private protocols are implemented to guarantee a wider range of compatibility.
+<!DOCTYPE html>
+<html>
 
-testimonials:
-  - text: "We have focused on the messaging and streaming field for years, during which we explored Corba notification, JMS and other standards to try to solve our stickiest business requirements. After evaluating the available alternatives, Alibaba chose to create a new cloud-oriented messaging standard, OpenMessaging, which is a vendor-neutral and language-independent and provides industrial guidelines for areas like finance, e-commerce, IoT, and big data. Moreover, it aims to develop messaging and streaming applications across heterogeneous systems and platforms. We hope it can be open, simple, scalable, and interoperable. In addition, we want to build an ecosystem according to this standard, such as benchmark, computation, and various connectors. We would like to have new contributions and hope everyone can work together to push the OpenMessaging standard forward."
-    author: Von Gosling
-    position: senior architect at Alibaba, co-creator of Apache RocketMQ, and original initiator of OpenMessaging
-  - text: "There are many different open source messaging solutions, including Apache ActiveMQ, Apache RocketMQ, Apache Pulsar, and Apache Kafka. The lack of an industry-wide, scalable messaging standard makes evaluating a suitable solution difficult. We are excited to support the joint effort from multiple open source projects working together to define a scalable, open messaging specification. Apache BookKeeper has been successfully deployed in production at Yahoo (via Apache Pulsar) and Twitter (via Apache DistributedLog) as their durable, high-performance, low-latency storage foundation for their enterprise-grade messaging systems. We are excited to join the OpenMessaging effort to help other projects address common problems like low-latency durability, consistency and availability in messaging solutions."
-    author: Sijie Guo
-    position: co-founder of Streamlio, PMC chair of Apache BookKeeper, and co-creator of Apache DistributedLog
-  - text: "As the sophistication and scale of applications’ messaging needs continue to grow, lack of a standard interface has created complexity and inflexibility barriers for developers and organizations. Streamlio is excited to work with other leaders to launch the OpenMessaging standards initiative in order to give customers easy access to high-performance, low-latency messaging solutions like Apache Pulsar that offer the durability, consistency, and availability that organizations require."
-    author: Matteo Merli
-    position: software engineer at Streamlio, co-creator of Apache Pulsar, and member of Apache BookKeeper PMC
-  - text: "In Didi, we have defined a private set of producer API and consumer API to hide differences among open source MQs such as Apache Kafka, Apache RocketMQ, etc. as well as to provide additional customized features. We are planning to release these to the open source community. So far, we have accumulated a lot of experience on MQs and API unification, and are willing to work in OpenMessaging to construct a common standard of APIs together with others. We sincerely believe that a unified and widely accepted API standard can benefit MQ technology and applications that rely on it."
-    author: Neil Qi
-    position: architect at Didi
-  - text: "Oath–a Verizon subsidiary of leading media and tech brands including Yahoo and AOL– supports open, collaborative initiatives and is glad to join the OpenMessaging project."
-    author: Joe Francis
-    position: director, Core Platforms
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-clients:
-  - images/@index/alibaba-logo.png
-  - images/@index/yahoo-logo.png
-  - images/@index/streamlio-logo.png
-  - images/@index/didi-logo.png
-  - images/@index/linux-logo.png
-  - images/@index/aliyun-logo.png
-  - images/@index/chinamobile-logo.png
-  - images/@index/weizhong-logo.png
-  - images/@index/Datapipeline.png
----
+  <title>OpenMessaging</title>
+  <meta name="description" content="OpenMessaging is a cloud-oriented and vendor-neutral open standard for messaging, providing industry guidelines for areas such as finance, e-commerce, IoT and Big Data and oriented toward furthering messaging and streaming applications across heterogeneous systems and platforms.
+">
 
-<div class='advanced mod modDefaultSlider'>
+  <link rel="stylesheet" href="/css/foundation.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/fontello.css">
+  <link rel="stylesheet" href="/css/font-awesome.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+
+  <script src="/javascripts/libs.js" type="text/javascript"></script>
+  <script>
+    var _hmt = _hmt || []; //define it for baidu seo
+
+    // terrificjs bootstrap
+    (function($) {
+        $(document).ready(function() {
+            var $page = $('body');
+            var config = {
+              dependencyPath: {
+                plugin: 'javascripts/'
+              }
+            }
+            var application = new Tc.Application($page, config);
+            application.registerModules();
+            application.start();
+
+            //Add baidu seo
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?da02b4505574c2f46febdc0874af5c8b";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        });
+    })(Tc.$);
+  </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-89603173-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-89603173-2');
+  </script>
+
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,300" media="screen" rel="stylesheet" type="text/css" />
+  <script src="/javascripts/masonry.pkgd.js" type="text/javascript"></script>
+  <script src="/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
+  <script src="/javascripts/slick.min.js" type="text/javascript"></script>
+
+  <link rel="canonical" href="/">
+  <link rel="alternate" type="application/rss+xml" title="OpenMessaging" href="/feed.xml" />
+</head>
+
+
+  <body>
+
+    <a href="" id="top"></a>
+<div style="width: 100%; background-color: rgb(235, 235, 235);">
+    <div style="max-width: 80rem; margin: 0 auto; margin-bottom: 0; padding-left: 20px">
+      <a class='' href="https://www.linuxfoundation.org/">
+        <img alt="" src="/images/linux-foundation-logo.png" style="height: 18px" />
+      </a>
+    </div>
+</div>
+<div class='navbar contain-to-grid sticky'>
+  <nav class='top-bar' data-options='sticky_on: large' data-topbar=''>
+    <ul class='title-area'>
+      <li class='name'>
+        <h1>
+          <a href="">
+            <img alt="" src="/images/oms-logo.png" />
+          </a>
+
+        </h1>
+
+      </li>
+      <li class='toggle-topbar menu-icon'>
+        <a href='#'>Menu</a>
+      </li>
+    </ul>
+    <section class='top-bar-section'>
+      <ul class="right">
+        
+          
+
+          
+            <li class="active">
+              <a href="/">Home</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="has-dropdown ">
+              <a href="/">Docs</a>
+              <ul class='dropdown'>
+                
+                  <li>
+                    <a href="/openmessaging-java">Java APIs</a>
+                  </li>
+                
+                  <li>
+                    <a href="/docs/benchmarks">Benchmarks</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="/blog">Blog</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="/community">Community</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="">
+              <a href="/members">Members</a>
+            </li>
+          
+        
+          
+
+          
+            <li class="has-dropdown ">
+              <a href="/">About</a>
+              <ul class='dropdown'>
+                
+                  <li>
+                    <a href="/charter">Charter</a>
+                  </li>
+                
+                  <li>
+                    <a href="/contribution">Contribution</a>
+                  </li>
+                
+              </ul>
+            </li>
+          
+        
+      </ul>
+    </section>
+  </nav>
+</div>
+
+
+    <div id='main' role='main'>
+      <div class='advanced mod modDefaultSlider'>
   <div class='sequence' data-autostop='on' data-timeout='0'>
     <ul class='sequence-pagination'>
-      {% for slide in page.slides %}
-        {% if forloop.index == 1 %}
+      
+        
           <li class='current'></li>
-        {% else %}
-          <li></li>
-        {% endif %}
-      {% endfor %}
+        
+      
     </ul>
     <ul class='sequence-canvas'>
-      {% for slide in page.slides %}
-        {% if forloop.index == 1 %}
-          {% assign class = "static" %}
-        {% else %}
-          {% assign class = '' %}
-        {% endif %}
+      
+        
 
-        <li class='frame {{class}}'>
-          <div class='bg' style='background-image: url({{slide.bg}});'></div>
-          {% if slide.infos %}
-            {% for info in slide.infos %}
-              <div class='info{{forloop.index}} {{info.animation}}' style=''>
-                <div class='row'>
-                  <div class='medium-10 large-8 columns'>
-                    <p class='fa fa-check' style='color: #333;'>{{info.text}}</p>
-                    <div class='spacing'></div>
-                  </div>
-                </div>
-              </div>
-            {% endfor %}
-          {% else %}
-            <div class='title {{slide.title.animation}}' style='color: rgb(255, 255, 255);'>
+        <li class='frame static'>
+          <div class='bg' style='background-image: url(images/@index/OpenMessagingCover.png);'></div>
+          
+            <div class='title ' style='color: rgb(255, 255, 255);'>
               <div class='row'>
-                <div class='{{slide.title.class}} columns'>
-                  <h2>{{slide.title.text}}</h2>
+                <div class='large-20 medium-20 columns'>
+                  <h2><font color="black" style="text-transform: none">A cloud native, vendor-neutral open specification for distributed messaging</font><br><iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=openmessaging&repo=specification&type=star&count=true&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe> <iframe style="display: inline-block;" src="https://ghbtns.com/github-btn.html?user=openmessaging&repo=specification&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="158px" height="30px"></iframe></h2>
                 </div>
               </div>
             </div>
-          {% endif %}
-          <div class='buttons-wrapper {{slide.buttons.animation}}' style=''>
+          
+          <div class='buttons-wrapper ' style=''>
             <div class='row'>
-              <div class='{{slide.buttons.class}} columns'>
+              <div class=' columns'>
                 <div class='two spacing'></div>
-                {% for button in slide.buttons.items %}
-                  <a target="_blank" class='button {{button.class}}' href='{{button.url}}'>{{button.text}}</a>
-                {% endfor %}
+                
               </div>
             </div>
           </div>
         </li>
-      {% endfor %}
+      
     </ul>
   </div>
 </div>
@@ -133,13 +220,43 @@ clients:
     <div class='large-12 columns'>
       <div class='mod modBoxedTextSlider'>
         <div class='boxes'>
-          {% for box in page.boxes %}
+          
             <div class='box' style='height: 300px'>
-              <i class='{{box.icon_class}}'></i>
-              <h4>{{box.title}}</h4>
-              <p>{{box.text}}</p>
+              <i class='fa fa-cloud'></i>
+              <h4>Cloud Oriented</h4>
+              <p>Designed for robust implementation on clouds with scalability, flexibility, isolation, and security.</p>
             </div>
-          {% endfor %}
+          
+            <div class='box' style='height: 300px'>
+              <i class='fa fa-compass'></i>
+              <h4>Multi Domains</h4>
+              <p>Does not rely on or favors any business products and provides a large range of support including finance, e-commerce and IoT.</p>
+            </div>
+          
+            <div class='box' style='height: 300px'>
+              <i class='fa fa-star-half-empty'></i>
+              <h4>Platform Independent</h4>
+              <p>Compatible with most platforms including Java, c/c++, go, .net, python, etc.</p>
+            </div>
+          
+            <div class='box' style='height: 300px'>
+              <i class='fa fa-filter'></i>
+              <h4>Streaming</h4>
+              <p>Enables big data streaming and computation to meet the cutting-edge business demands.</p>
+            </div>
+          
+            <div class='box' style='height: 300px'>
+              <i class='fa fa-dot-circle-o'></i>
+              <h4>Standard Benchmark</h4>
+              <p>Facilitates standard benchmark to allow standard tests.</p>
+            </div>
+          
+            <div class='box' style='height: 300px'>
+              <i class='fa fa-plug'></i>
+              <h4>Wire Level Pluggable</h4>
+              <p>MQTT, AMQP, Private protocols are implemented to guarantee a wider range of compatibility.</p>
+            </div>
+          
         </div>
       </div>
     </div>
@@ -196,15 +313,7 @@ clients:
 
 <!-- <div class='full parallax' style='background: #f5f5f5'>
   <div class='row'>
-    {% for milestone in page.milestones %}
-      <div class='medium-3 large-3 columns right-border left-border'>
-        <div class='mod modMilestone no-icon'>
-          <strong data-from='{{milestone.from}}' data-to='{{milestone.to}}'>&nbsp;</strong>
-          <span>{{milestone.title}}</span>
-          <div class='spacing'></div>
-        </div>
-      </div>
-    {% endfor %}
+    
   </div>
   <div class='three spacing'></div>
 </div> -->
@@ -223,13 +332,37 @@ clients:
         <div class='row'>
           <div class='small-12 columns'>
             <div class='items centered-text'>
-              {% for t in page.testimonials  %}
+              
                 <div class='item'>
-                  <p class='quote'>{{t.text}}</p>
-                  <p class='author'>- {{t.author}}, {{t.position}}</p>
+                  <p class='quote'>We have focused on the messaging and streaming field for years, during which we explored Corba notification, JMS and other standards to try to solve our stickiest business requirements. After evaluating the available alternatives, Alibaba chose to create a new cloud-oriented messaging standard, OpenMessaging, which is a vendor-neutral and language-independent and provides industrial guidelines for areas like finance, e-commerce, IoT, and big data. Moreover, it aims to develop messaging and streaming applications across heterogeneous systems and platforms. We hope it can be open, simple, scalable, and interoperable. In addition, we want to build an ecosystem according to this standard, such as benchmark, computation, and various connectors. We would like to have new contributions and hope everyone can work together to push the OpenMessaging standard forward.</p>
+                  <p class='author'>- Von Gosling, senior architect at Alibaba, co-creator of Apache RocketMQ, and original initiator of OpenMessaging</p>
                   <div class='two spacing'></div>
                 </div>
-              {% endfor %}
+              
+                <div class='item'>
+                  <p class='quote'>There are many different open source messaging solutions, including Apache ActiveMQ, Apache RocketMQ, Apache Pulsar, and Apache Kafka. The lack of an industry-wide, scalable messaging standard makes evaluating a suitable solution difficult. We are excited to support the joint effort from multiple open source projects working together to define a scalable, open messaging specification. Apache BookKeeper has been successfully deployed in production at Yahoo (via Apache Pulsar) and Twitter (via Apache DistributedLog) as their durable, high-performance, low-latency storage foundation for their enterprise-grade messaging systems. We are excited to join the OpenMessaging effort to help other projects address common problems like low-latency durability, consistency and availability in messaging solutions.</p>
+                  <p class='author'>- Sijie Guo, co-founder of Streamlio, PMC chair of Apache BookKeeper, and co-creator of Apache DistributedLog</p>
+                  <div class='two spacing'></div>
+                </div>
+              
+                <div class='item'>
+                  <p class='quote'>As the sophistication and scale of applications’ messaging needs continue to grow, lack of a standard interface has created complexity and inflexibility barriers for developers and organizations. Streamlio is excited to work with other leaders to launch the OpenMessaging standards initiative in order to give customers easy access to high-performance, low-latency messaging solutions like Apache Pulsar that offer the durability, consistency, and availability that organizations require.</p>
+                  <p class='author'>- Matteo Merli, software engineer at Streamlio, co-creator of Apache Pulsar, and member of Apache BookKeeper PMC</p>
+                  <div class='two spacing'></div>
+                </div>
+              
+                <div class='item'>
+                  <p class='quote'>In Didi, we have defined a private set of producer API and consumer API to hide differences among open source MQs such as Apache Kafka, Apache RocketMQ, etc. as well as to provide additional customized features. We are planning to release these to the open source community. So far, we have accumulated a lot of experience on MQs and API unification, and are willing to work in OpenMessaging to construct a common standard of APIs together with others. We sincerely believe that a unified and widely accepted API standard can benefit MQ technology and applications that rely on it.</p>
+                  <p class='author'>- Neil Qi, architect at Didi</p>
+                  <div class='two spacing'></div>
+                </div>
+              
+                <div class='item'>
+                  <p class='quote'>Oath–a Verizon subsidiary of leading media and tech brands including Yahoo and AOL– supports open, collaborative initiatives and is glad to join the OpenMessaging project.</p>
+                  <p class='author'>- Joe Francis, director, Core Platforms</p>
+                  <div class='two spacing'></div>
+                </div>
+              
             </div>
           </div>
           <div class='spacing'></div>
@@ -240,3 +373,60 @@ clients:
   <div class='three spacing'></div>
 </div>
 
+
+    </div>
+
+    <div id='footer'>
+  <div class='three spacing'></div>
+  <div class='row'>
+    <div class='large-7 medium-3 columns'>
+      <h3>
+        <a href='index.html'>
+          <img alt="" src="/images/oms-white-logo.png" />
+        </a>
+      </h3>
+      <p>Copyright &copy; 2017~2021 OpenMessaging Project, a Linux Foundation Collaborative Project. All Rights Reserved unless explicitly granted under an open source license.<br> The Linux Foundation is a registered trademark of The Linux Foundation. Linux is a registered trademark of Linus Torvalds.<br> Please see our <a href="https://www.linuxfoundation.org/terms" target="_blank">terms of use</a>, <a href="https://www.linuxfoundation.org/trademark-usage" target="_blank">trademark usage</a> and <a href=" https://www.linuxfoundation.org/privacy" target="_blank">privacy policy</a></p>
+      <div class='spacing'></div>
+      <div class='spacing'></div>
+    </div>
+    <div class='large-5 medium-5 columns'>
+      <div class='spacing'></div>
+      <h4>Contact us</h4>
+      <ul>
+        <li>&nbsp;&nbsp;&nbsp;<i class="fa fa-hand-o-right" ></i>&nbsp;&nbsp;&nbsp;<a href="https://groups.google.com/forum/#!forum/openmessaging">JOIN THE MAILING LIST</a></li>
+      </ul>
+      <div class='spacing'></div>
+      <ul class='socials'>
+        <li>
+          <a href='https://twitter.com/Open_Messaging'>
+            <i class='fa fa-twitter'></i>
+          </a>
+        </li>
+        <li>
+          <a href='https://github.com/openmessaging'>
+            <i class='fa fa-github'></i>
+          </a>
+        </li>
+        <li>
+          <a href='https://openmessaging.herokuapp.com/'>
+            <i class='fa fa-slack'></i>
+          </a>
+        </li>
+      </ul>
+      <div class='spacing'></div>
+    </div>
+  </div>
+  <div class='two spacing'></div>
+</div>
+
+<script src="/javascripts/jquery.countTo.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.appear.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.validate.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.sequence-min.js" type="text/javascript"></script>
+<script src="/javascripts/jquery.easing.1.3.js" type="text/javascript"></script>
+<script src="/javascripts/app.js" type="text/javascript"></script>
+
+
+  </body>
+
+</html>

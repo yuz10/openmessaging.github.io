@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>OpenMessaging</title>
+  <title>Benchmarks using the JMS API</title>
   <meta name="description" content="OpenMessaging is a cloud-oriented and vendor-neutral open standard for messaging, providing industry guidelines for areas such as finance, e-commerce, IoT and Big Data and oriented toward furthering messaging and streaming applications across heterogeneous systems and platforms.
 ">
 
@@ -56,7 +56,7 @@
   <script src="/javascripts/imagesloaded.pkgd.min.js" type="text/javascript"></script>
   <script src="/javascripts/slick.min.js" type="text/javascript"></script>
 
-  <link rel="canonical" href="/blog/">
+  <link rel="canonical" href="/docs/benchmarks/jms/">
   <link rel="alternate" type="application/rss+xml" title="OpenMessaging" href="/feed.xml" />
 </head>
 
@@ -120,7 +120,7 @@
           
 
           
-            <li class="active">
+            <li class="">
               <a href="/blog">Blog</a>
             </li>
           
@@ -170,253 +170,120 @@
       <div class="full">
   <div class="row">
     <div class="large-9 columns">
-      
-  <div class='big mod modBlogPost no_bg'>
-    <div class='images'>
-      
-    </div>
-    <div class='content'>
-      <p class='info'>
-        <span>March 08, 2019</span>
-        /
-        <span>
-          by
-          <a href="">The Linux Foundation</a>
-        </span>
-        /
-        <span>
-          In
-          
-            <a href="#">news</a>
-            
-          
-        </span>
-        <!-- /
-        <span>
-          <a href="#">4 commetns</a>
-        </span> -->
-      </p>
-      <h3><a href="/news/2019/03/08/21vianet-talkingdata-qiniucloud-360-finance-qingyuan-cloud-and-bingocloud-join-the-openmessaging-project/">21Vianet Enterprise Cloud, TalkingData, Qiniu Cloud, 360 Finance, Qingyuan Cloud and BingoCloud join the OpenMessaging Project</a></h3>
-      <p>The OpenMessaging project welcomes 21Vianet Enterprise Cloud, TalkingData, Qiniu Cloud, 360 Finance, Qingyuan Cloud and BingoCloud.</p>
-      <div class='spacing'></div>
-      <a class="button small" href="/news/2019/03/08/21vianet-talkingdata-qiniucloud-360-finance-qingyuan-cloud-and-bingocloud-join-the-openmessaging-project/">Read more</a>
-    </div>
-  </div>
-  <hr>
-  <div class='two spacing'></div>
+      <div class="mod modBlogPost big no_bg">
+        <h3><a href="/docs/benchmarks/jms/">Benchmarks using the JMS API</a></h3>
+        <p>This tutorial shows you how to run OpenMessaging <a href="..">benchmarks</a> for any messaging system that supports the <a href="https://jakarta.ee/specifications/messaging/2.0/">JMS API</a>.</p>
 
-  <div class='big mod modBlogPost no_bg'>
-    <div class='images'>
-      
-    </div>
-    <div class='content'>
-      <p class='info'>
-        <span>February 11, 2019</span>
-        /
-        <span>
-          by
-          <a href="">The Linux Foundation</a>
-        </span>
-        /
-        <span>
-          In
-          
-            <a href="#">news</a>
-            
-          
-        </span>
-        <!-- /
-        <span>
-          <a href="#">4 commetns</a>
-        </span> -->
-      </p>
-      <h3><a href="/news/2019/02/11/jd-cloud-iflytek-and-vipkid-join-the-openmessaging-project/">JD Cloud, Iflytek and VIPKid join the OpenMessaging Project</a></h3>
-      <p>The OpenMessaging project welcomes JD Cloud, Iflytek and VIPKid as new members.</p>
-      <div class='spacing'></div>
-      <a class="button small" href="/news/2019/02/11/jd-cloud-iflytek-and-vipkid-join-the-openmessaging-project/">Read more</a>
-    </div>
-  </div>
-  <hr>
-  <div class='two spacing'></div>
+<h2 id="initial-setup">Initial setup</h2>
 
-  <div class='big mod modBlogPost no_bg'>
-    <div class='images'>
-      
-    </div>
-    <div class='content'>
-      <p class='info'>
-        <span>January 17, 2019</span>
-        /
-        <span>
-          by
-          <a href="">The Linux Foundation</a>
-        </span>
-        /
-        <span>
-          In
-          
-            <a href="#">news</a>
-            
-          
-        </span>
-        <!-- /
-        <span>
-          <a href="#">4 commetns</a>
-        </span> -->
-      </p>
-      <h3><a href="/news/2019/01/17/yahoo-japan-and-emq-x-join-the-openmessaging-project/">Yahoo! JAPAN and EMQ X Join the OpenMessaging Project</a></h3>
-      <p>The OpenMessaging project welcomes Yahoo! JAPAN and EMQ X as new members.</p>
-      <div class='spacing'></div>
-      <a class="button small" href="/news/2019/01/17/yahoo-japan-and-emq-x-join-the-openmessaging-project/">Read more</a>
-    </div>
-  </div>
-  <hr>
-  <div class='two spacing'></div>
+<p>To being, you’ll need to clone the <a href="https://github.com/openmessaging/openmessaging-benchmark"><code class="highlighter-rouge">benchmark</code></a> repo from the <a href="https://github.com/openmessaging"><code class="highlighter-rouge">openmessaging</code></a> organization on <a href="https://github.com">GitHub</a>:</p>
 
-  <div class='big mod modBlogPost no_bg'>
-    <div class='images'>
-      
-    </div>
-    <div class='content'>
-      <p class='info'>
-        <span>October 05, 2018</span>
-        /
-        <span>
-          by
-          <a href="">The Linux Foundation</a>
-        </span>
-        /
-        <span>
-          In
-          
-            <a href="#">news</a>
-            
-          
-        </span>
-        <!-- /
-        <span>
-          <a href="#">4 commetns</a>
-        </span> -->
-      </p>
-      <h3><a href="/news/2018/10/05/jingdong-jd-com-china-mobile-cloud-qing-cloud-and-whale-cloud-join-the-openmessaging-project/">JingDong (JD.com), China Mobile Cloud, QingCloud, and Whale Cloud Join the OpenMessaging Project</a></h3>
-      <p>The goal of the OpenMessaging Project is to build out an industry standard, cloud oriented, and vendor neutral open standard for distributed messaging.</p>
-      <div class='spacing'></div>
-      <a class="button small" href="/news/2018/10/05/jingdong-jd-com-china-mobile-cloud-qing-cloud-and-whale-cloud-join-the-openmessaging-project/">Read more</a>
-    </div>
-  </div>
-  <hr>
-  <div class='two spacing'></div>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/openmessaging/openmessaging-benchmark
+<span class="nv">$ </span><span class="nb">cd </span>openmessaging-benchmark
+</code></pre></div></div>
+
+<p>You’ll also need to have <a href="https://maven.apache.org/install.html">Maven</a> installed.</p>
+
+<h2 id="create-local-artifacts">Create local artifacts</h2>
+
+<p>Once you have the repo cloned locally, you can create all the artifacts necessary to run the benchmarks with a single Maven command:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>mvn <span class="nb">install</span>
+</code></pre></div></div>
+
+<h2 id="deploy-your-cluster">Deploy your cluster</h2>
+
+<p>You have to deploy your cluster and the benchmark client, this usually depends on your JMS system.</p>
+
+<p>If you want to run the benchmark against Apache Pulsar or Apache Kafka you can follow the same instructions on the <a href="./pulsar.md">Pulsar Benchmark</a> and the <a href="./kafka.md">Kafka Benchmark</a> pages.</p>
+
+<h2 id="providing-your-jms-driver-implementation">Providing your JMS Driver implementation</h2>
+
+<p>The Benchmark does not provide any JMS driver, you have to add your driver in the “lib” directory of each worker node.
+If you had already launched the worker nodes processes you have to restart them in order to see the new jars loaded.</p>
+
+<p>Just drop the JMS jar file inside the “lib” directory.</p>
+
+<p>In case you want to run the benchmark using some Pulsar JMS Client or Kafka JMS Client please ensure that the exising classes in “lib” do not clash with the classes bundled with the JMS driver.
+In case of conflicts you will have to remove from “lib” the duplicated jars.</p>
+
+<p>This benchmark has been currently tested with Apache ActiveMQ® Artemis, Confluent® Kafka JMS Client (that is not open source) and with the DataStax® Fast JMS Driver for Apache Pulsar (OpenSource - ASLv2 licensed https://github.com/datastax/pulsar-jms).</p>
+
+<h2 id="configuring-the-jms-driver">Configuring the JMS driver</h2>
+
+<p>The JMS Driver accepts these configuration options:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">driverClass</code>: it must be <code class="highlighter-rouge">io.openmessaging.benchmark.driver.jms.JMSBenchmarkDriver</code></li>
+  <li><code class="highlighter-rouge">connectionFactoryClassName</code>: the class that implements the <code class="highlighter-rouge">javax.jms.ConnectionFactory</code> class</li>
+  <li><code class="highlighter-rouge">connectionFactoryConfigurationParam</code>: a string parameter to be passed to the constructor of the ConnectionFactory</li>
+</ul>
+
+<p>If the ConnectionFactory does not support a String configuration parameter the driver will try to interpret the String as a JSON struct and pass it to the constructor of the ConnectionFactory.</p>
+
+<h2 id="delegating-setup-to-an-exising-benchmark-driver">Delegating setup to an exising Benchmark Driver</h2>
+
+<p>Unfortunately the JMS API do not provide functions to manage the system, like creating topics or modifing configuration.
+If you want to compare the results of running the Benchmark on Pulsar of Kafka with or without the JMS API you can delegate
+the setup of the system to the native driver using the <code class="highlighter-rouge">delegateForAdminOperationsClassName</code> feature.</p>
+
+<h2 id="running-the-benchmark-using-a-legacy-jms-1x-driver">Running the benchmark using a legacy JMS 1.x driver</h2>
+
+<p>The JMS driver can run with a JMS 1.x driver, but in this case there are some limitations, in particular:</p>
+
+<ul>
+  <li>there is no non-blocking method to send messages</li>
+  <li>there is no way to set the subscription name on the consumer side</li>
+</ul>
+
+<p>You can activate the 1.x mode by setting <code class="highlighter-rouge">use20api</code> to <code class="highlighter-rouge">false</code></p>
 
 
-
-
-  <div class="pager">
-    
-      
-        <a href="/blog/page2" class="older">
-          <i class='fa fa-angle-double-left'></i>
-          Older Entries
-        </a>
-      
-    
-    
-      <span class="newer">
-        Newer Entries
-        <i class='fa fa-angle-double-right'></i>
-      </span>
-    
-  </div>
-
-
-
-<div class='four spacing'></div>
+      </div>
     </div>
     <div class="large-3 columns" id="sidebar">
-      <!-- <div class='links'>
-  <h3>Archives</h3>
+      <div class="links">
+  <h3>Documentation</h3>
   <ul>
-    <li>
-      <a href='#'>December 2011</a>
-      <span>(2)</span>
-    </li>
-    <li>
-      <a href='#'>November 2011</a>
-      <span>(4)</span>
-    </li>
-    <li>
-      <a href='#'>October 2011</a>
-      <span>(1)</span>
-    </li>
-    <li>
-      <a href='#'>September 2011</a>
-      <span>(3)</span>
-    </li>
-    <li>
-      <a href='#'>July 2011</a>
-      <span>(5)</span>
-    </li>
-    <li>
-      <a href='#'>June 2011</a>
-      <span>(3)</span>
-    </li>
-    <li>
-      <a href='#'>May 2011</a>
-      <span>(6)</span>
-    </li>
-    <li>
-      <a href='#'>April 2011</a>
-      <span>(1)</span>
-    </li>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li><h4>Benchmarks</h4></li>
+  <ul>
+    
+    <li><a href="/docs/benchmarks">Intro</a></li>
+    
+    <li><a href="/docs/benchmarks/rocketmq">Apache RocketMQ</a></li>
+    
+    <li><a href="/docs/benchmarks/pulsar">Apache Pulsar</a></li>
+    
+    <li><a href="/docs/benchmarks/kafka">Apache Kafka</a></li>
+    
+  </ul>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   </ul>
 </div>
-<div class='links'>
-  <h3>Categories</h3>
-  <ul>
-    
-      <li><a href="#">Design</a></li>
-    
-      <li><a href="#">News</a></li>
-    
-  </ul>
-</div> -->
-<div class='links'>
-  <h3>Recent Posts</h3>
-  <ul>
-    
-      
-      <li><a href="/news/2019/03/08/21vianet-talkingdata-qiniucloud-360-finance-qingyuan-cloud-and-bingocloud-join-the-openmessaging-project/">21vianet enterprise cloud, talkingdata, qiniu cloud, 360 finance, qingyuan cloud and bingocloud join the openmessaging project</a></li>
-    
-      
-      <li><a href="/news/2019/02/11/jd-cloud-iflytek-and-vipkid-join-the-openmessaging-project/">Jd cloud, iflytek and vipkid join the openmessaging project</a></li>
-    
-      
-      <li><a href="/news/2019/01/17/yahoo-japan-and-emq-x-join-the-openmessaging-project/">Yahoo! japan and emq x join the openmessaging project</a></li>
-    
-      
-      <li><a href="/news/2018/10/05/jingdong-jd-com-china-mobile-cloud-qing-cloud-and-whale-cloud-join-the-openmessaging-project/">Jingdong (jd.com), china mobile cloud, qingcloud, and whale cloud join the openmessaging project</a></li>
-    
-      
-      <li><a href="/news/2018/09/06/Webank-and-DataPipeline-Join-OpenMessaging-to-Build-an-Open-Standard-for-Distributed-Messaging/">Webank and datapipeline join openmessaging to build an open standard for distributed messaging</a></li>
-    
-      
-      <li><a href="/design/2018/03/28/openmessaging-domain-architecture-v0.3/">Openmessaging domain architecture</a></li>
-    
-      
-        
-  </ul>
-</div>
-<!-- <div class='links'>
-  <h3>Tags</h3>
-  <ul>
-    
-  </ul>
-</div>
-<div class='four spacing'></div> -->
-
     </div>
   </div>
 </div>
-
     </div>
 
     <div id='footer'>
