@@ -23,8 +23,6 @@ jobs:
         cd $GITHUB_WORKSPACE/source/
         make setup
         make build
-        rm .git/ -rf
-
         
     - uses: actions/checkout@v2
       with:
@@ -34,7 +32,7 @@ jobs:
     - run: |
           cd $GITHUB_WORKSPACE/master/
           git rm -rf .
-          cp -Rf $GITHUB_WORKSPACE/source/. .
+          cp -Rf $GITHUB_WORKSPACE/source/_site/. .
           ls
           git config --global user.email "action@github.com"
           git config --global user.name "github-action"
