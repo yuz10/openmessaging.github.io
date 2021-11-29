@@ -21,6 +21,6 @@ jobs:
         ruby-version: 2.4.1
 
     - name: build
-    - run: |
+      run: |
         make setup
         ls -l
