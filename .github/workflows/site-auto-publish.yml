@@ -22,6 +22,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/source/
         make setup
+        make build
         rm .git/ -rf
 
         
